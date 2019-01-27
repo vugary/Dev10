@@ -1,0 +1,114 @@
+<!--
+Name: Gary Vu
+Date: Jan 19, 2019
+Description: Restaurant Website HomePage
+            Because this is the HomePage the following will be addded:
+                - Jumbotron to call out New Location
+                - Carousel to call out Three pieces of Information
+                - An message informing the User about Enabling JavaScript for better viewing performance
+            It makes sense to only add these two to the HomePage as it will seem repetitve to add "New Information Alert" 
+            to the Menu as well as Contact Page; hence the different header. 
+-->
+
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>HomePage</title>
+
+        <!-- Meta Elements -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       
+        <!-- Bootstraps Links-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <!-- External CSS Sheet-->
+        <link href="restaurantStyles.css" rel="stylesheet" type="text/css" />
+        
+        <!-- Internal Style Sheet-->
+      <style>  
+          body{
+              background-color: azure
+          }
+            #descriptionImage{
+                background-color:coral;
+            }
+            #carouselContent {
+                background-color: bisque;
+            }
+          
+            .closebtn {
+              color: black;
+              font-weight: bold;
+              cursor: pointer;
+              transition: 0.3s;
+            }
+          
+          .closebtn:hover {
+                color: black;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <header class = "jumbotron"> <!-- jumbotron Header-->
+            <h1>Dev's Diner</h1>
+            <h2 class="text-right mt-1">Minneapolis Location now OPEN!</h2>
+           <!-- <hr /> -->
+            <div class = "alert">   <!-- JavaScript Enabling Alert-->
+                <span class = "closebtn" onclick = "this.parentElement.style.display = 'none';">&times;</span>
+                This Website is best viewed with JavaScript Enabled.
+            </div>
+
+        </header>
+        
+        <!-- Links -->
+        <nav> 
+                <a class = "btn badge-pill" href="homepage.html"><i class = "fa fa-home"></i>Home</a>
+				<a class = "btn badge-pill" href="menu.html">Menu</a>
+				<a class = "btn badge-pill" href="contact.html">Contact Us</a>                   
+        </nav>
+        <br>
+        <!-- Body Section with Image and Description-->
+        <div id = "descriptionImage"> 
+        <center>
+            <br>
+            <img src="images/restaurant.jpg"
+             style = "
+                      border: thick white solid; 
+                      width: 640px; 
+                      height: 427px; 
+                      "/>
+            <p><font size = "5"><i>Welcome to Dev's Dinner! Come try our famous menu. Crafted with the freshest ingredients, we hope that our food provides you with the comfort and joy you need.</i></font></p>
+        </center>
+        </div>
+        <!-- Carousel with sliding information-->
+            <div id="carouselContent" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    
+                    <div class="carousel-item active text-center p-4">
+                     <p>We are Opening a New Location!</p>
+                    </div>
+
+                    <div class="carousel-item text-center p-4">
+                    <p>We're rolling out our seasonal menu, with special options for this season.</p>
+                    </div>
+
+                    <div class="carousel-item text-center p-4">
+                    <p>The Drink of the Month is SC Special Brew.</p>
+                    </div>            
+                </div>
+            </div>
+    </body>
+    
+    <footer>
+        <p>10 Dev Street, St Paul, Minnesota, 55010</p>
+        <p>123-456-7890
+    </footer>
+    
+</html>
