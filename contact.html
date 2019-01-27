@@ -1,0 +1,154 @@
+<html>
+    <!--
+    Name: Gary Vu 
+    Date Created: January 19, 2019
+    Description: Contact Website Page
+    -->
+	<head>
+        
+		<title>Contact Me</title>
+		<!-- JavaScript file-->
+		<script type="text/JavaScript" src="restaurant.js"></script>
+		<!-- External Style Sheet-->
+        <link href="restaurantStyles.css" rel="stylesheet" type="text/css" />
+        <!-- Meta Links -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap Links-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
+        <link href="restaurantStyles.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <!-- Internal Styles-->
+        <style>
+            section{
+                background-color: bisque;
+            }
+
+            label,legend {
+                font-weight: bold;
+            }
+            input[type=text] {
+                border: 2px solid #0d1f2d;
+                width: 50%;
+                padding: 8px 8px;
+                margin: 12px 0;
+                box-sizing: border-box;
+                font-size: 1.1em;
+            }
+
+            fieldset {
+                background-color: #fef9ff;
+                width: 100%;
+                padding: 12px 20px;
+                margin: 12px 0;
+                box-sizing:	border-box;
+                border: 2px solid #0d1f2d;
+            }
+
+            textarea {
+                width: 100%;
+                height: 200px;
+                padding: 12px 20px;
+                margin: 12px 0;
+                box-sizing: border-box;
+                border: 2px solid #0d1f2d;
+                border-radius: 3px;
+                background-color: #fff;
+                resize: none;
+            }
+
+</style>
+        
+	</head>
+
+        <header>
+            <h1>Dev's Diner</h1>
+        </header>
+	<body>
+		<br /> 
+             <!-- Links-->
+		      <nav>
+                <a class = "btn badge-pill" href="homepage.html"><i class = "fa fa-home"></i>Home</a>
+				<a class = "btn badge-pill" href="menu.html">Menu</a>
+				<a class = "btn badge-pill" href="contact.html">Contact Us</a>                    
+            </nav>
+		<br />
+
+      <section>  
+        <h2>Contact Me</h2>
+		<form name = "contactMe" onsubmit="return validate()" method = "post">
+
+            <!-- First Name label and textbox -->
+			<label for="firstName">First Name:</label><br />
+			<input type="text" id="firstName" name="firstName"><br />
+            
+            <!-- Last Name label and textbox -->
+			<label for="lastName">Last Name:</label><br />
+			<input type="text" id="lastName" name="lastName"><br />
+            
+            <!-- Phone Number label and textbox -->
+			<label for="phone">Phone Number:</label><br />
+			<input type="text"id="phone" name="phone"><br />
+            
+            <!-- Dropdown menu -->
+			<label for="contact">Reason for Inquiry:</label><br />
+			<select id="contact" name="contact">
+				<option value="catering" selected>--Catering--</option>
+				<option value="privateparty">Private Party</option>
+				<option value="feedback">Feedback</option>
+				<option value="other">Others</option>
+			</select>
+            <br><br>
+            <!-- Additional Information Text -->
+            <label for="info">Additional Information</label><br />
+			<textarea id="info"></textarea><br />
+            <br />
+            <!-- questionaire -->
+			<label for="checkquestion">Have you beed to Dev's before?</label><br>
+            <fieldset>
+			<input type="radio" id="choice1" name="questionnaire" onsubmit = "check1()">
+			<label for="choice1">Yes</label><br />
+			<input type="radio" id="choice2" name="questionnaire" onsubmit = "check2()">
+			<label for="choice2">No</label><br />
+			</fieldset>
+            
+            <br />
+            <!-- Date Availability -->
+			<label for="lastName">Best Days to Contact You (Check ALL that apply):</label><br>
+            <fieldset>
+			<input type="checkbox" id="monday" name="monday" onsubmit = "checkM()">
+			<label for="monday">M</label>
+			
+			<input type="checkbox" id="tuesday" name="tuesday" onsubmit = "checkT()">
+			<label for="tuesday">T</label>
+
+			<input type="checkbox" id="wednesday" name="wednesday" onsubmit = "checkW()">
+			<label for="wednesday">W</label>
+
+			<input type="checkbox" id="thursday" name="thursday" onsubmit = "checkTh()">
+			<label for="thursday">Th</label>
+
+			<input type="checkbox" id="friday" name="friday" onsubmit = "checkF()">
+			<label for="friday">F</label>
+
+			</fieldset>
+            <br />
+            
+			<input type="submit" name="submit" value="Submit">
+		</form>
+		<hr />
+        </section>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+	</body>
+
+    <footer>
+        <p>10 Dev Street, St Paul, Minnesota, 55010</p>
+        <p>123-456-7890
+    </footer>
+    
+</html>
+            
