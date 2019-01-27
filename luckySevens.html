@@ -1,0 +1,72 @@
+<!--
+Name: Gary Vu
+Date: January 18, 2019
+Description: 	HTML Script for Lucky Sevens Dice Game
+				Define Header, body with game set up as well as 
+				a recording table to show data from the play set. 
+				Allow the user to play again by betting after the 
+				initial/previous game has ended. 
+				
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<!-- BootStrap Link for Styling Purposes -->
+    <script type="text/JavaScript" src="luckySevens.js"></script>
+	<!-- JavaScript Link used in order to calculate data from game -->
+    <title>Lucky Sevens</title>
+	<!-- Game Title -->
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Lucky Sevens</h1>
+		<!-- Game Header -->
+        <form name="betFun" onsubmit="return play()">
+			<!-- Defining function to be performed from the JavaScript -->
+
+            <div class="form-group"> <!-- Defining Starting Bet User Input Box -->
+                <label for="Bet">Starting Bet: </label>
+                <input type="text" id="bet" name="bet" class="form-control" placeholder="$0.00">
+            </div>
+			<!-- Defining Play Button [note that this button will change to Play again after initial game -->
+            <button type="submit" id="submitButton" class="btn btn-default">Play</button>
+           
+        </form>
+
+
+		<!-- Defining Results table -->
+        <table id="results" class="table table-striped" style="display: none;">
+
+            <tbody>
+                <tr>
+                    <td>Starting Bet $:</td>
+                    <td><span id="startingBet"></span></td>
+                </tr>
+                <tr>
+                    <td>Total Rolls Before Going Broke: </td>
+                    <td><span id="totalRolls"></span></td>
+                </tr>
+                <tr>
+                    <td>Highest Amount Won $:</td>
+                    <td><span id="mostWon"></span></td>
+                </tr>
+                <tr>
+                    <td>Roll Count At Highest Amount Won: </td>
+                    <td><span id="totalRollsToBest"></span></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+
+</body>
+
+<footer>
+	<hr/>
+	<p>&copy; 2019 Gary Vu. All rights reserved.</p>
+</footer>
+</html>
